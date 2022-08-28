@@ -9,8 +9,12 @@ else if (num < 0) {
     return "ERROR"
 }
 else if (num = "") {
-    const number = Math.floor(Math.random() * 1000)
-    return string.repeat(number)
+    let max = 1000;
+    let min = 1;
+    const randomInt = function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) ) + min;
+      }
+    return string.repeat(randomInt)
 }
 else if (string = "") {
     return ""
